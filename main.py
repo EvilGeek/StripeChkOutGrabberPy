@@ -7,10 +7,10 @@ def getHTML(url):
     session = HTMLSession()
     response = session.get(url)
 
-    # Render the JavaScript on the page
+    #thanks to stackoverflow, helped in fixing a rare error.
     response.html.render(timeout=30)
 
-    # Get the rendered HTML
+
     html = response.html.html
     if "Something went wrong" in html or "You might be having a network connection problem, the link might be expired, or the payment provider cannot be reached at the moment." in html:
         return None
