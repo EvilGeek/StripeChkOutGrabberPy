@@ -79,12 +79,12 @@ if html==None:
     print("Session Expired!")
     exit()
 pk=getPK(html)
-print(pk)
+print("PK: ",pk)
 cs=getCS(url)
-print(cs)
+print("CS: ",cs)
 
 raw=getRawData(pk, cs)
 
-print(getEmail(raw))
-print(getAmt(raw))
-print(getCurrency(raw))
+print("Email: ", getEmail(raw))
+print("AMT: ", getAmt(raw))
+print("Currency: ", getCurrency(raw))
